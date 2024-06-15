@@ -44,7 +44,7 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
 
 4) YD LiDAR INSTALLATION
-	1) run command line `./YDLiDAR_SDK_INSTALLATION.sH` in directory `other`
+	1) run command line `./YDLiDAR_SDK_INSTALLATION.sh` in directory `other`
 
    	2) RUN BELOW COMMAND LINE IN SRC FOLDER OF WS IF  ydlidar_ros2_driver PACKAGE IS MISSING IN SRC DIRECTORY
 	
