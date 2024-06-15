@@ -74,7 +74,7 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
  
 1) Run this command line in Remote PC ]
 
- 	run `ssh ela2@192.168.43.125`
+ 	run `ssh ela2@IP_ADDRESS`
 
  	[ IP ADDRESS MIGHT DIFFER CHECK USING "ifconfig" in Jetson Orin terminal]
 
