@@ -1,2 +1,68 @@
 # ELA2.0_NAV
 ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
+
+# Install dependencies
+
+	# Nav Stack Install
+	sudo apt install ros-humble-nav2*
+	sudo apt install ros-humble-navigation2
+
+	# Cartographer install
+	sudo apt install ros-humble-cartographer*
+
+	# Instruction to download ORB-SLAM3
+	[ GO TO THE WEBSITE BELOW FOR INSTRUCTION ]
+	https://github.com/bharath5673/ORB-SLAM3 [ READ BELOW BEFORE CONTINUING ]
+
+	[ ATTENTION ] 
+
+	https://github.com/zang09/ORB-SLAM3-STEREO-FIXED [ USE THIS REEPO FOR ORB-SLAM3 INSTEAD OF THE ONE IN THE INSTRUCTION ABOVE]
+	git checkout 4.2.0 [ USE OPENCV 4.2.0 ]
+	[ Add "#include <thread>" into <path-to-opencv>/opencv/modules/gapi/test/gapi_async_test.cpp ]
+	[ DURING BUILDING THE ORB-SLAM3 MAY HAVE ERROR, YOU CAN DEBUG IT USING GPT, YOU MAY NEED TO CHANGE FEW LINES OF CODE IN CERTAIN FILE]
+
+	[ ATTENTION ] 
+
+	https://github.com/zang09/ORB_SLAM3_ROS2 [ CLONE THIS PACKAGE IN WS IF MISSING ]
+
+	#YD LiDAR INSTALLATION
+	run command line "./YDLiDAR_SDK_INSTALLATION.sh" in directory ela2_ws/README
+
+	[ RUN BELOW COMMAND LINE IN SRC FOLDER OF WS IF  ydlidar_ros2_driver PACKAGE IS MISSING]
+	git clone https://github.com/YDLIDAR/ydlidar_ros2_driver.git ydlidar_ros2_ws/src/ydlidar_ros2_driver
+	[FOR MORE INFO: https://github.com/YDLIDAR/ydlidar_ros2_driver ]
+
+	# Realsense2 Library Install
+	sudo apt install ros-humble-librealsense2*
+	sudo apt install ros-humble-realsense2*
+	[ FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros]
+
+	run command line [ "./MODIFY_realsens_launch_file.sh" ] in directory ela2_ws/README 
+	Then [ COPY ] the [ rs_launch.txt file ] in the [ directory ela2_ws/README ]  to the opened python file
+	[ By doing this it added some missing parameter into the Launch file ]
+
+# Install dependencies
+
+
+
+# ELA2.0 BRINGUP
+
+	[ Run this command line in Remote PC ]
+	ssh ela2@192.168.43.125 [ IP ADDRESS MIGHT DIFFER CHECK USING "ifconfig" in Jetson Orin terminal]
+
+	[ Run this command line in ela2@ela2 terminal]
+	ros2 launch ella2_bringup ella2_bringup.launch.xml
+
+	[ Run this command line in Remote PC terminal]
+	[ Open New Terminal]
+	ros2 launch ella2_bringup display.launch.xml
+
+# ELA2.0 BRINGUP
+
+
+# ELA2.0 Teleop KEYBOARD
+
+	[OPEN NEW TERMINAL]
+	ros2 run ella2_teleop ela2_teleop_keyboard
+
+# ELA2.0 Teleop KEYBOARD
