@@ -42,7 +42,8 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 	`https://github.com/zang09/ORB_SLAM3_ROS2` [ CLONE THIS PACKAGE IN src directory ]
 
 
-5) YD LiDAR INSTALLATION
+
+4) YD LiDAR INSTALLATION
 	1) run command line `./YDLiDAR_SDK_INSTALLATION.sH` in directory `other`
 
    	2) RUN BELOW COMMAND LINE IN SRC FOLDER OF WS IF  ydlidar_ros2_driver PACKAGE IS MISSING IN SRC DIRECTORY
@@ -51,7 +52,7 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 	
    	3) FOR MORE INFO: https://github.com/YDLIDAR/ydlidar_ros2_driver
 
-6) Realsense2 Library Install
+5) Realsense2 Library Install
 	sudo apt install ros-humble-librealsense2*
 	sudo apt install ros-humble-realsense2*
 	[ FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros]
