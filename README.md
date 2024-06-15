@@ -56,9 +56,9 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 	
  	1) RUN BELOW COMMAND LINE
 	
- 	`sudo apt install ros-humble-librealsense2*`
-	
- 	`sudo apt install ros-humble-realsense2*`
+	 	`sudo apt install ros-humble-librealsense2*`
+		
+	 	`sudo apt install ros-humble-realsense2*`
 	
    	2) FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros
 
