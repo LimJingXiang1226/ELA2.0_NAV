@@ -1,0 +1,38 @@
+<launch>
+    <let name="urdf_path" 
+         value="$(find-pkg-share ella2_description)/urdf/ella2.urdf.xacro" />
+    
+    <let name="robot_controller_config" 
+         value="$(find-pkg-share mecanumbot_description)/config/robot_controller_config.yaml" />
+         
+    <let name="rviz_config_path" 
+         value="$(find-pkg-share ella2_nav)/rviz/nav.rviz" />
+         
+    <node pkg="robot_state_publisher" exec="robot_state_publisher">
+        <param name="robot_description"
+               value="$(command 'xacro $(var urdf_path)')" />
+    </node>
+    
+    <node pkg="joint_state_publisher" exec="joint_state_publisher" output="screen">
+        <param name="robot_description"
+               value="$(command 'xacro $(var urdf_path)')" />
+        <param name="use_sim_time" 
+               value="false"/>
+    </node>
+    
+    <include file="$(find-pkg-share mecanumbot_bringup)/launch/ella2_hardware.py"/>
+    
+    <include file="$(find-pkg-share ydlidar_ros2_driver)/launch/ydlidar_launch.py"/>
+    
+    <include file="$(find-pkg-share rf2o_laser_odometry)/launch/rf2o_laser_odometry.launch.py"/>
+    
+    <include file="$(find-pkg-share realsense2_camera)/launch/rs_launch.py">
+    	<arg name="device_type" value="d435"/>
+    	<arg name="enable_infra" value="true"/>
+    	<arg name="enable_infra1" value="true"/>
+    	<arg name="enable_infra2" value="true"/>
+    </include>
+    
+    <node pkg="rviz2" exec="rviz2" output="screen" args="-d $(var rviz_config_path)"/>
+
+</launch>
