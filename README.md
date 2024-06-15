@@ -78,11 +78,11 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
  	[ IP ADDRESS MIGHT DIFFER CHECK USING "ifconfig" in Jetson Orin terminal]
 
-2) Run this command line in ela2@ela2 terminal
+2) Run this command line in ela2@ela2 terminal [ELA2.0 BRINGUP]
 
 	`ros2 launch ella2_bringup ella2_bringup.launch.xml`
 
-3) Run this command line in Remote PC terminal
+3) Run this command line in Remote PC terminal [RVIZ DISPLAY]
    	1) Open New Terminal
 	2) run `ros2 launch ella2_bringup display.launch.xml` 
 
