@@ -16,30 +16,30 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
 3) Instruction to download ORB-SLAM3
 
-	GO TO THE WEBSITE BELOW FOR INSTRUCTION TO INSTALL ORB-SLAM3
+	1) GO TO THE WEBSITE BELOW FOR INSTRUCTION TO INSTALL ORB-SLAM3
 	
-	`https://github.com/bharath5673/ORB-SLAM3`
+		`https://github.com/bharath5673/ORB-SLAM3`
+		
+	 	[ READ BELOW BEFORE CONTINUING ]
+
+	2) ATTENTION 
+
+		1) USE THIS REPO FOR ORB-SLAM3 INSTEAD OF THE ONE IN THE INSTRUCTION ABOVE
+		
+	 		`https://github.com/zang09/ORB-SLAM3-STEREO-FIXED`
+		
+	   	2) USE OPENCV 4.2.0
 	
- 	[ READ BELOW BEFORE CONTINUING ]
-
-	# ATTENTION 
-
-	1) USE THIS REPO FOR ORB-SLAM3 INSTEAD OF THE ONE IN THE INSTRUCTION ABOVE
+			`git checkout 4.2.0`
 	
- 		`https://github.com/zang09/ORB-SLAM3-STEREO-FIXED`
+	 	3) Troubleshooting during build
 	
-   	2) USE OPENCV 4.2.0
+	   		Add `#include <thread>` into `<path-to-opencv>/opencv/modules/gapi/test/gapi_async_test.cpp`
+	   
+			DURING BUILDING THE ORB-SLAM3 MAY HAVE ERROR, YOU CAN DEBUG IT USING CHATGPT, YOU MAY NEED TO CHANGE FEW LINES OF CODE IN CERTAIN FILE
 
-		`git checkout 4.2.0`
-
- 	3) Troubleshooting during build
-
-   		Add `#include <thread>` into `<path-to-opencv>/opencv/modules/gapi/test/gapi_async_test.cpp`
-   
-		DURING BUILDING THE ORB-SLAM3 MAY HAVE ERROR, YOU CAN DEBUG IT USING CHATGPT, YOU MAY NEED TO CHANGE FEW LINES OF CODE IN CERTAIN FILE
-
-   	# CLONE THIS PACKAGE IN src directory
-	`https://github.com/zang09/ORB_SLAM3_ROS2` [ CLONE THIS PACKAGE IN src directory ]
+   	3) CLONE THIS PACKAGE IN src directory
+		`https://github.com/zang09/ORB_SLAM3_ROS2` [ CLONE THIS PACKAGE IN src directory ]
 
 
 
