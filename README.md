@@ -14,29 +14,29 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
 3) Instruction to download ORB-SLAM3
 
-	[ GO TO THE WEBSITE BELOW FOR INSTRUCTION ]
+	GO TO THE WEBSITE BELOW FOR INSTRUCTION
 	
 	`https://github.com/bharath5673/ORB-SLAM3`
 	
  	[ READ BELOW BEFORE CONTINUING ]
 
-	[ ATTENTION ] 
+	## ATTENTION 
 
-	[ USE THIS REPO FOR ORB-SLAM3 INSTEAD OF THE ONE IN THE INSTRUCTION ABOVE]
+	1) USE THIS REPO FOR ORB-SLAM3 INSTEAD OF THE ONE IN THE INSTRUCTION ABOVE
 	
- 	`https://github.com/zang09/ORB-SLAM3-STEREO-FIXED`
+ 		`https://github.com/zang09/ORB-SLAM3-STEREO-FIXED`
 	
- 	[ USE OPENCV 4.2.0]
+   	2) USE OPENCV 4.2.0
 
-	`git checkout 4.2.0`
+		`git checkout 4.2.0`
 
- 	[Troubleshooting during build]
+ 	3) Troubleshooting during build
 
-   	Add `#include <thread>` into `<path-to-opencv>/opencv/modules/gapi/test/gapi_async_test.cpp`
+   		Add `#include <thread>` into `<path-to-opencv>/opencv/modules/gapi/test/gapi_async_test.cpp`
    
-	DURING BUILDING THE ORB-SLAM3 MAY HAVE ERROR, YOU CAN DEBUG IT USING CHATGPT, YOU MAY NEED TO CHANGE FEW LINES OF CODE IN CERTAIN FILE
+		DURING BUILDING THE ORB-SLAM3 MAY HAVE ERROR, YOU CAN DEBUG IT USING CHATGPT, YOU MAY NEED TO CHANGE FEW LINES OF CODE IN CERTAIN FILE
 
- 	[ CLONE THIS PACKAGE IN src directory ]
+   	## CLONE THIS PACKAGE IN src directory
 	`https://github.com/zang09/ORB_SLAM3_ROS2` [ CLONE THIS PACKAGE IN src directory ]
 
 5) YD LiDAR INSTALLATION
