@@ -4,13 +4,16 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 ## Install dependencies
 
 1) Nav2 Stack Install
+
 	`sudo apt install ros-humble-nav2*
 	sudo apt install ros-humble-navigation2`
 
 2) Cartographer install
+
 	`sudo apt install ros-humble-cartographer*`
 
 3) Instruction to download ORB-SLAM3
+
 	[ GO TO THE WEBSITE BELOW FOR INSTRUCTION ]
 	`https://github.com/bharath5673/ORB-SLAM3`
 	[ READ BELOW BEFORE CONTINUING ]
@@ -26,14 +29,14 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
 	https://github.com/zang09/ORB_SLAM3_ROS2 [ CLONE THIS PACKAGE IN src directory ]
 
-5) YD LiDAR INSTALLATION
+4) YD LiDAR INSTALLATION
 	run command line "./YDLiDAR_SDK_INSTALLATION.sh" in directory ela2_ws/README
 
 	[ RUN BELOW COMMAND LINE IN SRC FOLDER OF WS IF  ydlidar_ros2_driver PACKAGE IS MISSING]
 	git clone https://github.com/YDLIDAR/ydlidar_ros2_driver.git ydlidar_ros2_ws/src/ydlidar_ros2_driver
 	[FOR MORE INFO: https://github.com/YDLIDAR/ydlidar_ros2_driver ]
 
-6) Realsense2 Library Install
+5) Realsense2 Library Install
 	sudo apt install ros-humble-librealsense2*
 	sudo apt install ros-humble-realsense2*
 	[ FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros]
