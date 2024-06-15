@@ -63,7 +63,8 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
    	2) FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros
 
 	3) MODIFICATION TO BE MADE TO DEFAULT LAUNCH FILE
-	 	run command line `./MODIFY_realsens_launch_file.sh` in `other` directory
+
+		run command line `./MODIFY_realsens_launch_file.sh` in `other` directory
 		
   		Then `COPY` the `rs_launch.txt` file in the `other` directory  to the opened python file
 
@@ -77,11 +78,11 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
  	[ IP ADDRESS MIGHT DIFFER CHECK USING "ifconfig" in Jetson Orin terminal]
 
-2) Run this command line in ela2@ela2 terminal]
+2) Run this command line in ela2@ela2 terminal
 
 	`ros2 launch ella2_bringup ella2_bringup.launch.xml`
 
-3) Run this command line in Remote PC terminal]
+3) Run this command line in Remote PC terminal
    	1) Open New Terminal
 	2) run `ros2 launch ella2_bringup display.launch.xml` 
 
