@@ -1,0 +1,18 @@
+<launch>
+
+  <!-- ELA2.0 BRINGUP -->
+  <include file="$(find-pkg-share ella2_bringup)/launch/ella2_bringup.launch.xml"/>
+  
+  <!-- Cartographer -->
+  <include file="$(find-pkg-share ella2_slam)/launch/carto.launch.xml"/>
+
+  <!-- ORB-SLAM3 -->
+  <include file="$(find-pkg-share ella2_slam)/launch/orbslam3.launch.xml"/>
+
+  <!-- Nav2 -->
+  <include file="$(find-pkg-share nav2_bringup)/launch/navigation_launch.py">
+  	<arg name="params_file" value="$(find-pkg-share ella2_nav)/param/ella2.yaml"/>
+    <arg name="use_sim_time" value="false"/>   
+  </include>
+
+</launch>
