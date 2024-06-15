@@ -1,38 +1,39 @@
 # ELA2.0_NAV
 ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
-# Install dependencies
+## Install dependencies
 
 1) Nav2 Stack Install
-	sudo apt install ros-humble-nav2*
-	sudo apt install ros-humble-navigation2
+	`sudo apt install ros-humble-nav2*
+	sudo apt install ros-humble-navigation2`
 
 2) Cartographer install
-	sudo apt install ros-humble-cartographer*
+	`sudo apt install ros-humble-cartographer*`
 
 3) Instruction to download ORB-SLAM3
 	[ GO TO THE WEBSITE BELOW FOR INSTRUCTION ]
-	https://github.com/bharath5673/ORB-SLAM3 [ READ BELOW BEFORE CONTINUING ]
+	`https://github.com/bharath5673/ORB-SLAM3`
+	[ READ BELOW BEFORE CONTINUING ]
 
 	[ ATTENTION ] 
 
 	https://github.com/zang09/ORB-SLAM3-STEREO-FIXED [ USE THIS REEPO FOR ORB-SLAM3 INSTEAD OF THE ONE IN THE INSTRUCTION ABOVE]
 	git checkout 4.2.0 [ USE OPENCV 4.2.0 ]
-	[ Add "#include <thread>" into <path-to-opencv>/opencv/modules/gapi/test/gapi_async_test.cpp ]
-	[ DURING BUILDING THE ORB-SLAM3 MAY HAVE ERROR, YOU CAN DEBUG IT USING GPT, YOU MAY NEED TO CHANGE FEW LINES OF CODE IN CERTAIN FILE]
+   	Add "#include <thread>" into <path-to-opencv>/opencv/modules/gapi/test/gapi_async_test.cpp
+	DURING BUILDING THE ORB-SLAM3 MAY HAVE ERROR, YOU CAN DEBUG IT USING GPT, YOU MAY NEED TO CHANGE FEW LINES OF CODE IN CERTAIN FILE
 
 	[ ATTENTION ] 
 
-	https://github.com/zang09/ORB_SLAM3_ROS2 [ CLONE THIS PACKAGE IN WS IF MISSING ]
+	https://github.com/zang09/ORB_SLAM3_ROS2 [ CLONE THIS PACKAGE IN src directory ]
 
-4) YD LiDAR INSTALLATION
+5) YD LiDAR INSTALLATION
 	run command line "./YDLiDAR_SDK_INSTALLATION.sh" in directory ela2_ws/README
 
 	[ RUN BELOW COMMAND LINE IN SRC FOLDER OF WS IF  ydlidar_ros2_driver PACKAGE IS MISSING]
 	git clone https://github.com/YDLIDAR/ydlidar_ros2_driver.git ydlidar_ros2_ws/src/ydlidar_ros2_driver
 	[FOR MORE INFO: https://github.com/YDLIDAR/ydlidar_ros2_driver ]
 
-5) Realsense2 Library Install
+6) Realsense2 Library Install
 	sudo apt install ros-humble-librealsense2*
 	sudo apt install ros-humble-realsense2*
 	[ FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros]
