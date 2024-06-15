@@ -53,29 +53,40 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
    	3) FOR MORE INFO: https://github.com/YDLIDAR/ydlidar_ros2_driver
 
 5) Realsense2 Library Install
-	sudo apt install ros-humble-librealsense2*
-	sudo apt install ros-humble-realsense2*
-	[ FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros]
 
-	run command line [ "./MODIFY_realsens_launch_file.sh" ] in directory ela2_ws/README 
-	Then [ COPY ] the [ rs_launch.txt file ] in the [ directory ela2_ws/README ]  to the opened python file
-	[ By doing this it added some missing parameter into the Launch file ]
+   	1)RUN BELOW COMMAND LINE
+	
+ 	`sudo apt install ros-humble-librealsense2*
+	sudo apt install ros-humble-realsense2*`
+	
+   	2) FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros
+
+	3) MODIFICATION TO BE MADE TO DEFAULT LAUNCH FILE
+	 	run command line `./MODIFY_realsens_launch_file.sh` in `other` directory
+		
+  		Then `COPY` the `rs_launch.txt` file in the `other` directory  to the opened python file
+
+    		By doing this it added some missing parameter into the Launch file
 
 
 # ELA2.0 BRINGUP
+ 
+1) Run this command line in Remote PC ]
 
-[ Run this command line in Remote PC ]
-	ssh ela2@192.168.43.125 [ IP ADDRESS MIGHT DIFFER CHECK USING "ifconfig" in Jetson Orin terminal]
+ 	run `ssh ela2@192.168.43.125`
 
-[ Run this command line in ela2@ela2 terminal]
-	ros2 launch ella2_bringup ella2_bringup.launch.xml
+ 	[ IP ADDRESS MIGHT DIFFER CHECK USING "ifconfig" in Jetson Orin terminal]
 
-[ Run this command line in Remote PC terminal]
-	[ Open New Terminal]
-	ros2 launch ella2_bringup display.launch.xml
+2) Run this command line in ela2@ela2 terminal]
+
+	`ros2 launch ella2_bringup ella2_bringup.launch.xml`
+
+3) Run this command line in Remote PC terminal]
+   	1) Open New Terminal
+	2) run `ros2 launch ella2_bringup display.launch.xml` 
 
 
 # ELA2.0 Teleop KEYBOARD
 
-[OPEN NEW TERMINAL]
-ros2 run ella2_teleop ela2_teleop_keyboard
+1) OPEN NEW TERMINAL
+2) run `ros2 run ella2_teleop ela2_teleop_keyboard`
