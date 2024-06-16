@@ -70,6 +70,8 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
 	By doing this it added some missing parameter into the Launch file
 
+
+
 ## ELA2.0 BRINGUP
  
 1) Run this command line in Remote PC
@@ -85,6 +87,7 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 3) Run this command line in Remote PC terminal [RVIZ DISPLAY]
    	1) Open New Terminal
 	2) run `ros2 launch ella2_bringup display.launch.xml` 
+
 
 
 ## ELA2.0 Teleop KEYBOARD
