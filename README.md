@@ -3,76 +3,76 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
 ## Install dependencies
 
-1) Nav2 Stack Install
+### Nav2 Stack Install
 
-	`sudo apt install ros-humble-nav2*
-	sudo apt install ros-humble-navigation2`
+`sudo apt install ros-humble-nav2*`
+
+`sudo apt install ros-humble-navigation2`
+
+### Cartographer install
+
+`sudo apt install ros-humble-cartographer*`
 
 
-2) Cartographer install
+### Instruction to download ORB-SLAM3
 
-	`sudo apt install ros-humble-cartographer*`
+1) GO TO THE WEBSITE BELOW FOR INSTRUCTION TO INSTALL ORB-SLAM3
 
-
-3) Instruction to download ORB-SLAM3
-
-	1) GO TO THE WEBSITE BELOW FOR INSTRUCTION TO INSTALL ORB-SLAM3
+	`https://github.com/bharath5673/ORB-SLAM3`
 	
-		`https://github.com/bharath5673/ORB-SLAM3`
-		
-	 	[ READ BELOW BEFORE CONTINUING ]
+	[ READ BELOW BEFORE CONTINUING ]
 
-	2) ATTENTION 
+2) ATTENTION 
 
-		1) USE THIS REPO FOR ORB-SLAM3 INSTEAD OF THE ONE IN THE INSTRUCTION ABOVE
-		
-	 		`https://github.com/zang09/ORB-SLAM3-STEREO-FIXED`
-		
-	   	2) USE OPENCV 4.2.0
+	1) USE THIS REPO FOR ORB-SLAM3 INSTEAD OF THE ONE IN THE INSTRUCTION ABOVE
 	
-			`git checkout 4.2.0`
+		`https://github.com/zang09/ORB-SLAM3-STEREO-FIXED`
 	
-	 	3) Troubleshooting during build
+	2) USE OPENCV 4.2.0
+
+		`git checkout 4.2.0`
+
+	3) Troubleshooting during build
+
+		Add `#include <thread>` into `<path-to-opencv>/opencv/modules/gapi/test/gapi_async_test.cpp`
+   
+		DURING BUILDING THE ORB-SLAM3 MAY HAVE ERROR, YOU MAY NEED TO DEBUG IT AND CHANGE FEW LINES OF CODE IN CERTAIN FILE
+
+3) CLONE THIS PACKAGE IN SRC DIRECTORY
+	`https://github.com/zang09/ORB_SLAM3_ROS2` [ CLONE THIS PACKAGE IN src directory ]
+
+
+
+### YD LiDAR INSTALLATION
+1) run command line `./YDLiDAR_SDK_INSTALLATION.sh` in directory `other`
+
+2) RUN BELOW COMMAND LINE IN SRC FOLDER OF WS IF  ydlidar_ros2_driver PACKAGE IS MISSING IN SRC DIRECTORY
+
+	`git clone https://github.com/YDLIDAR/ydlidar_ros2_driver.git ydlidar_ros2_ws/src/ydlidar_ros2_driver`
+
+3) FOR MORE INFO: https://github.com/YDLIDAR/ydlidar_ros2_driver
+
+### Realsense2 Library Install
 	
-	   		Add `#include <thread>` into `<path-to-opencv>/opencv/modules/gapi/test/gapi_async_test.cpp`
-	   
-			DURING BUILDING THE ORB-SLAM3 MAY HAVE ERROR, YOU CAN DEBUG IT USING CHATGPT, YOU MAY NEED TO CHANGE FEW LINES OF CODE IN CERTAIN FILE
+1) RUN BELOW COMMAND LINE
 
-   	3) CLONE THIS PACKAGE IN SRC DIRECTORY
-		`https://github.com/zang09/ORB_SLAM3_ROS2` [ CLONE THIS PACKAGE IN src directory ]
-
-
-
-4) YD LiDAR INSTALLATION
-	1) run command line `./YDLiDAR_SDK_INSTALLATION.sh` in directory `other`
-
-   	2) RUN BELOW COMMAND LINE IN SRC FOLDER OF WS IF  ydlidar_ros2_driver PACKAGE IS MISSING IN SRC DIRECTORY
+	`sudo apt install ros-humble-librealsense2*`
 	
- 		`git clone https://github.com/YDLIDAR/ydlidar_ros2_driver.git ydlidar_ros2_ws/src/ydlidar_ros2_driver`
+	`sudo apt install ros-humble-realsense2*`
+
+2) FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros
+
+3) MODIFICATION TO BE MADE TO DEFAULT LAUNCH FILE
+
+	run command line `./MODIFY_realsens_launch_file.sh` in `other` directory
 	
-   	3) FOR MORE INFO: https://github.com/YDLIDAR/ydlidar_ros2_driver
+	Then `COPY` the `rs_launch.txt` file in the `other` directory  to the opened python file
 
-5) Realsense2 Library Install
-	
- 	1) RUN BELOW COMMAND LINE
-	
-	 	`sudo apt install ros-humble-librealsense2*`
-		
-	 	`sudo apt install ros-humble-realsense2*`
-	
-   	2) FOR MORE INFO: https://github.com/IntelRealSense/realsense-ros
+	By doing this it added some missing parameter into the Launch file
 
-	3) MODIFICATION TO BE MADE TO DEFAULT LAUNCH FILE
-
-		run command line `./MODIFY_realsens_launch_file.sh` in `other` directory
-		
-  		Then `COPY` the `rs_launch.txt` file in the `other` directory  to the opened python file
-
-  		By doing this it added some missing parameter into the Launch file
-
-# ELA2.0 BRINGUP
+## ELA2.0 BRINGUP
  
-1) Run this command line in Remote PC ]
+1) Run this command line in Remote PC
 
  	run `ssh ela2@IP_ADDRESS`
 
@@ -87,7 +87,7 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 	2) run `ros2 launch ella2_bringup display.launch.xml` 
 
 
-# ELA2.0 Teleop KEYBOARD
+## ELA2.0 Teleop KEYBOARD
 
 1) OPEN NEW TERMINAL
 2) run `ros2 run ella2_teleop ela2_teleop_keyboard`
