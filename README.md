@@ -9,12 +9,12 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
 `sudo apt install ros-humble-navigation2`
 
-### Cartographer install
+### Cartographer Install
 
 `sudo apt install ros-humble-cartographer*`
 
 
-### Instruction to download ORB-SLAM3
+### Instruction to Install ORB-SLAM3
 
 1) GO TO THE GITHUB REPO BELOW FOR INSTRUCTION TO INSTALL ORB-SLAM3
 
@@ -39,11 +39,13 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 		DURING BUILDING THE OPENCV 4.2.0 MAY HAVE ERROR, YOU MAY NEED TO DEBUG IT AND CHANGE FEW LINES OF CODE IN CERTAIN FILE
 
 3) CLONE THIS PACKAGE IN SRC DIRECTORY
-	`https://github.com/zang09/ORB_SLAM3_ROS2` [ CLONE THIS PACKAGE IN src directory ]
+	
+ 	`https://github.com/zang09/ORB_SLAM3_ROS2`
 
 
 
 ### YD LiDAR INSTALLATION
+
 1) run command line `./YDLiDAR_SDK_INSTALLATION.sh` in directory `other`
 
 2) RUN BELOW COMMAND LINE IN SRC FOLDER OF WS IF  ydlidar_ros2_driver PACKAGE IS MISSING IN SRC DIRECTORY
@@ -71,6 +73,23 @@ ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 	By doing this it added some missing parameter into the Launch file
 
 
+### Laser Odometry Install
+
+1) CLONE THIS PACKAGE IN SRC DIRECTORY
+
+	`https://github.com/MAPIRlab/rf2o_laser_odometry.git`
+
+### Mecanum Drive Control
+
+1) CLONE THIS PACKAGE IN SRC DIRECTORY
+   
+	`https://github.com/deborggraever/ros2-mecanum-bot.git`
+
+2) Modification made to the package
+
+   1) Add `ella2_hardware.py` file in the Launch Folder of `mecanumbot_bringup` package [
+
+      [`ella2_hardware.py` is in `other` folder in this repo]
 
 ## ELA2.0 BRINGUP
  
