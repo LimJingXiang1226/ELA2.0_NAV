@@ -1,6 +1,13 @@
 # ELA2.0_NAV
 ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
+System Tested on below version
+- Ubuntu 22.04
+- ROS2 HUMBLE
+- OpenCV 4.2.0
+- YD LiDAR X2
+- Intel Realsense D435i 
+
 ## Install dependencies
 
 ### Nav2 Stack Install
