@@ -1,10 +1,12 @@
 # ELA2.0_NAV
 
+ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
+
 <p align="center">
   <img src="https://github.com/LimJingXiang1226/ELA2.0_NAV/tree/main/other/image/ELA2.0.jpeg />
 </p>
-
-ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
+	  
+![ELA2.0](other/image/ELA2.0.jpeg  "ELA2.0")
 
 System Tested on below version
 - Ubuntu 22.04
