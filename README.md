@@ -1,6 +1,6 @@
 # ELA2.0_NAV
 
-## ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
+ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
 <p align="center">
   <img src="https://github.com/LimJingXiang1226/ELA2.0_NAV/raw/main/other/image/ELA2.0.jpeg" alt="ELA2.0" />
