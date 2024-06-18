@@ -1,5 +1,5 @@
 # ELA2.0_NAV
-!(other/images/ELA2.0.jpeg  "ELA2.0")
+!(other/image/ELA2.0.jpeg  "ELA2.0")
 
 ELA2.0 NAVIGATION SYSTEM WITH CARTOGRAPHER &amp; ORB-SLAM3
 
