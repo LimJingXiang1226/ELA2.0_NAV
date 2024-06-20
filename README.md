@@ -99,9 +99,19 @@ System Tested on below version
 
 2) Modification made to the package
 
-   1) Add `ella2_hardware.py` file in the Launch Folder of `mecanumbot_bringup` package [
+   Add `ella2_hardware.py` file in the Launch Folder of `mecanumbot_bringup` package
 
-      [`ella2_hardware.py` is in `other` folder in this repo]
+   [`ella2_hardware.py` is in `other` folder in this repo]
+
+### Robot Pose Package
+1) CLONE THIS PACKAGE IN SRC DIRECTORY
+
+   `git clone https://github.com/MilanMichael/robot_pose_publisher_ros2`
+
+3) Modify `robot_pose_publisher.cpp` in src directory of package
+
+   Include the Neccesary Header: `#include <tf2_ros/buffer.h>` and `#include <tf2_ros/transform_listener.h>`
+
 
 ## ELA2.0 BRINGUP
 
