@@ -119,7 +119,13 @@ System Tested on below version
    	1) Open New Terminal
 	2) run `ros2 launch ella2_bringup display.launch.xml` 
 
+### Setup Jetson Orin Nano to Automatically run ELA2.0 BRINGUP
 
+1) Navigate to `other` directory 
+
+2) Run following command line
+
+   `./Jetson_AutoBringup_setup.sh`
 
 ## ELA2.0 Teleop KEYBOARD
 
