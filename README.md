@@ -104,7 +104,21 @@ System Tested on below version
       [`ella2_hardware.py` is in `other` folder in this repo]
 
 ## ELA2.0 BRINGUP
- 
+
+### Setup Jetson Orin Nano to Automatically run ELA2.0 BRINGUP
+
+1) Navigate to `other` directory 
+
+2) Run following command line
+
+   `./Jetson_AutoBringup_setup.sh`
+
+3) If user name is not `ela2`:
+
+   Replace User Name in `ELA2.0_BRINGUP.sh` [Home Directory] & `ela2.service` [ /etc/systemd/system ]
+
+### Without Auto ELA2.0 BRINGUP
+
 1) Run this command line in Remote PC
 
  	run `ssh ela2@IP_ADDRESS`
@@ -118,18 +132,6 @@ System Tested on below version
 3) Run this command line in Remote PC terminal [RVIZ DISPLAY]
    	1) Open New Terminal
 	2) run `ros2 launch ella2_bringup display.launch.xml` 
-
-### Setup Jetson Orin Nano to Automatically run ELA2.0 BRINGUP
-
-1) Navigate to `other` directory 
-
-2) Run following command line
-
-   `./Jetson_AutoBringup_setup.sh`
-
-3) If user name is not `ela2`:
-
-   Replace User Name in `ELA2.0_BRINGUP.sh` [Home Directory] & `ela2.service` [ /etc/systemd/system ]
 
 ## ELA2.0 Teleop KEYBOARD
 
