@@ -117,6 +117,15 @@ System Tested on below version
 
    Replace User Name in `ELA2.0_BRINGUP.sh` [Home Directory] & `ela2.service` [ /etc/systemd/system ]
 
+   Run `sudo systemctl daemon-reload && sudo systemctl enable ela2.service`
+   
+
+5) If Issue oOccur, Debug Using Following Commandline:
+   
+   `sudo systemctl status ela2.service`
+
+   `journalctl -u ela2.service -f`
+
 ### Without Auto ELA2.0 BRINGUP
 
 1) Run this command line in Remote PC
@@ -128,10 +137,6 @@ System Tested on below version
 2) Run this command line in ela2@ela2 terminal [ELA2.0 BRINGUP]
 
 	`ros2 launch ella2_bringup ella2_bringup.launch.xml`
-
-3) Run this command line in Remote PC terminal [RVIZ DISPLAY]
-   	1) Open New Terminal
-	2) run `ros2 launch ella2_bringup display.launch.xml` 
 
 ## ELA2.0 Teleop KEYBOARD
 
