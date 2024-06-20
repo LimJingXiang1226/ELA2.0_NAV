@@ -127,6 +127,10 @@ System Tested on below version
 
    `./Jetson_AutoBringup_setup.sh`
 
+3) If user name is not `ela2`:
+
+   Replace User Name in `ELA2.0_BRINGUP.sh` [Home Directory] & `ela2.service` [ /etc/systemd/system ]
+
 ## ELA2.0 Teleop KEYBOARD
 
 1) OPEN NEW TERMINAL
