@@ -1,0 +1,13 @@
+[Unit]
+Description=Initialize ELA2
+After=network.target
+
+[Service]
+ExecStart=/home/ela2/ELA2.0_BRINGUP.sh
+User=ela2
+WorkingDirectory=/home/ela2
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
