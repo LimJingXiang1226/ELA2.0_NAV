@@ -167,6 +167,9 @@ System Tested on below version
 ## ELA2.0 SLAM
 
 ### Cartographer SLAM
+
+`ros2 launch ella2_slam carto.launch.xml simulation:=true use_sim_time:=true bringup:=true display:=true`
+
 ### Cartographer Localization
 ### ORB_SLAM3
 
