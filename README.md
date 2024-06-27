@@ -124,7 +124,7 @@ System Tested on below version
 
 ## ELA2.0 BRINGUP
 
-### Setup Jetson Orin Nano to Automatically run ELA2.0 BRINGUP
+### Setup Jetson Orin Nano to Automatically run ELA2.0 BRINGUP (Physical Robot)
 
 1) Navigate to `other` directory 
 
@@ -145,7 +145,7 @@ System Tested on below version
 
    `journalctl -u ela2.service -f`
 
-### Without Auto ELA2.0 BRINGUP
+### Without Auto ELA2.0 BRINGUP (Physical Robot)
 
 1) Run this command line in Remote PC
 
