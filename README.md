@@ -50,9 +50,13 @@ System Tested on below version
    
 		DURING BUILDING THE OPENCV 4.2.0 MAY HAVE ERROR, YOU MAY NEED TO DEBUG IT AND CHANGE FEW LINES OF CODE IN CERTAIN FILE
 
-3) CLONE THIS PACKAGE IN SRC DIRECTORY
-	
- 	`https://github.com/zang09/ORB_SLAM3_ROS2`
+3) Install orbslam3_ros2 package in Workspace
+
+   1) CLONE THIS PACKAGE IN SRC DIRECTORY
+
+      `https://github.com/zang09/ORB_SLAM3_ROS2` (Follow instruction in this repo)
+
+   2) Replace `Stereo` & `Mono` Folder in `src` folder of the package with the one in `other` directory with the modify code that publish the robot pose using ORB_SLAM3
 
 
 
@@ -102,25 +106,13 @@ System Tested on below version
    Add `ella2_hardware.py` file in the Launch Folder of `mecanumbot_bringup` package
 
    [`ella2_hardware.py` is in `other` folder in this repo]
-
-### Robot Pose Package
-1) CLONE THIS PACKAGE IN SRC DIRECTORY
-
-   `git clone https://github.com/MilanMichael/robot_pose_publisher_ros2`
-
-3) Modify `robot_pose_publisher.cpp` in src directory of package
-
-   Include the Neccesary Header: `#include <tf2_ros/buffer.h>` and `#include <tf2_ros/transform_listener.h>`
+   
 
 ### tf_transformation Library for Pose_Fusion
 
 1) Run Following CommandLine:
 
-   `git clone https://github.com/DLu/tf_transformations.git`
-
-   `cd tf_transformations/`
-
-   `pip install .`
+   `sudo apt-get install ros-humble-tf-transformations`
 
 ## ELA2.0 BRINGUP
 
@@ -136,10 +128,10 @@ System Tested on below version
 
    Replace User Name in `ELA2.0_BRINGUP.sh` [Home Directory] & `ela2.service` [ /etc/systemd/system ]
 
-   Run `sudo systemctl daemon-reload && sudo systemctl enable ela2.service`
+   Run `sudo systemctl daemon-reload && sudo systemctl enable ela2.service` after change is made
    
 
-5) If Issue oOccur, Debug Using Following Commandline:
+5) If Issue Occur, Debug Using Following Commandline:
    
    `sudo systemctl status ela2.service`
 
@@ -164,5 +156,22 @@ System Tested on below version
    
 ## ELA2.0 Teleop KEYBOARD
 
-1) OPEN NEW TERMINAL
-2) run `ros2 run ella2_teleop ela2_teleop_keyboard`
+1) Physical Robot
+
+   `ros2 run ella2_teleop ela2_teleop_keyboard`
+   
+4) Simulation
+
+   `ros2 run ella2_teleop ela2_teleop_keyboard --ros-args -p simulation:=true`
+
+## ELA2.0 SLAM
+
+### Cartographer SLAM
+### Cartographer Localization
+### ORB_SLAM3
+
+## ELA2.0 NAVIGATION
+
+### Naviagtion with Previous Saved Map (No ORB_SLAM3)
+### Navigation with Previous Saved Map (With ORB_SLAM3)
+### Navigation While Mapping (Cartographer + ORB_SLAM3)
