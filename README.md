@@ -157,6 +157,11 @@ System Tested on below version
 
 	`ros2 launch ella2_bringup ella2_bringup.launch.xml`
 
+### Simulation Bringup
+1) Run this Following line
+
+   `ros2 launch ella2_bringup ella2_bringup.launch.xml simulation:=true use_sim_time:=true`
+   
 ## ELA2.0 Teleop KEYBOARD
 
 1) OPEN NEW TERMINAL
