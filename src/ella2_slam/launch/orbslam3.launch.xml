@@ -1,7 +1,0 @@
-<launch>
-  
-  <!-- ORB-SLAM3 -->
-  <node pkg="orbslam3" exec="stereo" output="screen"
-        args="/home/ela2/ORB_SLAM3/Vocabulary/ORBvoc.txt /home/ela2/ella2_ws/src/orbslam3/config/stereo/RealSense_D435i.yaml BOOL_RECTIFY"/>
-
-</launch>
