@@ -1,0 +1,25 @@
+<launch>
+
+  <!-- Simulation: Set Argumet True if using for Simulation -->
+  <arg name="use_sim_time" default="false"/>
+
+  <!-- General: Choose Map File to use -->
+  <arg name="map" default="my_map"/>
+
+
+  <!-- General: Start Cartographer Localization Mode -->
+  <node name="cartographer_node" pkg="cartographer_ros"
+      exec="cartographer_node" args="
+          -configuration_directory $(find-pkg-share ella2_slam)/config
+          -configuration_basename lidar_localization.lua
+          -load_state_filename $(find-pkg-share ella2_nav)/maps/$(var map).pbstream"
+      output="screen">
+    <param name="use_sim_time" value="$(var use_sim_time)" />
+    <remap from="scan" to="/scan" />
+  </node>
+  
+  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+      exec="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+
+</launch>
+
