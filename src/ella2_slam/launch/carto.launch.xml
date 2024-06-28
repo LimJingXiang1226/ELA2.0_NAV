@@ -1,0 +1,46 @@
+<!-- Launch File Arguments -->
+<!-- 1) simulation (false)-->
+<!-- 2) use_sim_time (false)-->
+<!-- 3) bringup (false)-->
+<!-- 4) display (false)-->
+
+<launch>
+
+  <!-- Simulation: Set Argumet True if using for Simulation -->
+  <arg name="simulation" default="false"/>
+  <arg name="use_sim_time" default="false"/>
+
+  <!-- General: Set Argumet True if haven't start ELA2.0 BRINGUP -->
+  <arg name="bringup" default="false"/>
+
+  <!-- General: ELA2.0 BRINGUP -->
+  <group if="$(var bringup)">
+    <include file="$(find-pkg-share ella2_bringup)/launch/ella2_bringup.launch.xml"/>
+  </group>
+
+  <!-- General: Set Argument True for RVIZ DISPLAY -->
+  <arg name="display" default="false"/>
+
+  <!-- General: Start RVIZ DISPLAY -->
+  <let name="rviz_config_path" 
+       value="$(find-pkg-share ella2_slam)/rviz/cartographer.rviz" />
+  
+  <group if="$(var display)">
+    <node pkg="rviz2" exec="rviz2" output="screen" args="-d $(var rviz_config_path)"/>
+  </group>
+
+  <!-- General: Start Cartographer -->
+  <node name="cartographer_node" pkg="cartographer_ros"
+      exec="cartographer_node" args="
+          -configuration_directory $(find-pkg-share ella2_slam)/config
+          -configuration_basename lidar.lua"
+      output="screen">
+    <param name="use_sim_time" value="$(var use_sim_time)" />
+    <remap from="scan" to="/scan" />
+  </node>
+  
+  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+      exec="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+
+</launch>
+

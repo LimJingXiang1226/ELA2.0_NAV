@@ -1,0 +1,9 @@
+<launch>
+  
+  <arg name="user_name" default="ljx"/>
+  
+  <!-- General: Start ORB-SLAM3 -->
+  <node pkg="orbslam3" exec="mono" output="screen"
+        args="/home/ljx/ORB_SLAM3/Vocabulary/ORBvoc.txt /home/ljx/ORB_SLAM3/Examples/Monocular/TUM1.yaml"/>
+
+</launch>

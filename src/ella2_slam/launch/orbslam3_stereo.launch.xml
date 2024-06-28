@@ -1,0 +1,9 @@
+<launch>
+
+  <arg name="user_name" default="ljx"/>
+
+  <!-- General: Start ORB-SLAM3 -->
+  <node pkg="orbslam3" exec="stereo" output="screen"
+        args="/home/$(var user_name)/ORB_SLAM3/Vocabulary/ORBvoc.txt /home/$(var user_name)/ELA2.0_NAV/src/orbslam3/config/stereo/RealSense_D435i.yaml BOOL_RECTIFY"/>
+
+</launch>
