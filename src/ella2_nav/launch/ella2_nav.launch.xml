@@ -92,5 +92,13 @@
       <include file="$(find-pkg-share ella2_slam)/launch/orbslam3_stereo.launch.xml"/>
     </group>
   </group>
+  
+  <!-- General: Start Pose Fusion Node -->
+  <arg name="alpha" default="0.0"/>
+  
+  <node pkg="ella2_pose" exec="pose_fusion_node">
+    <param name="use_sim_time" value="$(var use_sim_time)"/>
+    <param name="alpha" value="$(var alpha)"/>
+  </node> 
 
 </launch>
