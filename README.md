@@ -160,7 +160,7 @@ System Tested on below version
 
    `ros2 run ella2_teleop ela2_teleop_keyboard`
    
-4) Simulation
+2) Simulation
 
    `ros2 run ella2_teleop ela2_teleop_keyboard --ros-args -p simulation:=true`
 
@@ -168,13 +168,60 @@ System Tested on below version
 
 ### Cartographer SLAM
 
-`ros2 launch ella2_slam carto.launch.xml simulation:=true use_sim_time:=true bringup:=true display:=true`
+1) Physical Robot
+
+   `ros2 launch ella2_slam carto.launch.xml bringup:=true display:=true`
+   
+2) Simulation
+
+   `ros2 launch ella2_slam carto.launch.xml simulation:=true use_sim_time:=true bringup:=true display:=true`
 
 ### Cartographer Localization
+
+1) Physical Robot
+
+   `ros2 launch ella2_slam carto_localization.launch.xml map:=<map_file_name>`
+   
+2) Simulation
+   
+   `ros2 launch ella2_slam carto_localization.launch.xml map:=<map_file_name> use_sim_time:=true`
+   
 ### ORB_SLAM3
 
-## ELA2.0 NAVIGATION
+1) Physical Robot
 
+   `ros2 launch ella2_slam orbslam3_stereo.launch.xml`
+   
+2) Simulation
+   
+   `ros2 launch ella2_slam orbslam3_mono.launch.xml`
+   
+## ELA2.0 NAVIGATION
 ### Naviagtion with Previous Saved Map (No ORB_SLAM3)
+
+1) Physical Robot
+
+   `ros2 launch ella2_nav ella2_nav.launch.xml bringup:=true display:=true pre_map:=true map:=<map_file_name>`
+   
+2) Simulation
+   
+   `ros2 launch ella2_nav ella2_nav.launch.xml bringup:=true display:=true pre_map:=true map:=<map_file_name> simulation:=true use_sim_time:=true`
+   
 ### Navigation with Previous Saved Map (With ORB_SLAM3)
+1) Physical Robot
+
+   `ros2 launch ella2_nav ella2_nav.launch.xml bringup:=true display:=true pre_map:=true map:=<map_file_name> orb_slam3:=true`
+   
+2) Simulation
+   
+   `ros2 launch ella2_nav ella2_nav.launch.xml bringup:=true display:=true pre_map:=true map:=<map_file_name> orb_slam3:=true simulation:=true use_sim_time:=true`
+   
 ### Navigation While Mapping (Cartographer + ORB_SLAM3)
+
+1) Physical Robot
+
+   `ros2 launch ella2_nav ella2_nav.launch.xml bringup:=true display:=true orb_slam3:=true`
+   
+2) Simulation
+   
+   `ros2 launch ella2_nav ella2_nav.launch.xml bringup:=true display:=true orb_slam3:=true simulation:=true use_sim_time:=true`
