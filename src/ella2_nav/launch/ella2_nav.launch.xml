@@ -5,7 +5,8 @@
 <!-- 4) display (false)-->
 <!-- 5) map (my_map) -->
 <!-- 6) pre_map (false) -->
-<!-- 6) orb_slam3 (false) -->
+<!-- 7) orb_slam3 (false) -->
+<!-- 8) alpha (0.0) -->
 
 <launch>
 
