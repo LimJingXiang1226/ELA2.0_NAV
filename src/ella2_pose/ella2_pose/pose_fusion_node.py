@@ -32,7 +32,6 @@ class PoseFusionNode(Node):
         self.robot_pose_pub = self.create_publisher(PoseStamped, '/robot_pose', 10)
 
         self.orbslam_pose = None
-        self.map_odom_tf = None
 
         self.timer = self.create_timer(1.0/265.0, self.fuse_poses)  # 20 Hz
 
@@ -110,9 +109,6 @@ class PoseFusionNode(Node):
         self.robot_pose.pose.orientation.y = fused_orientation[1]
         self.robot_pose.pose.orientation.z = fused_orientation[2]
         self.robot_pose.pose.orientation.w = fused_orientation[3]
-        
-        self.get_logger().info(f"Fused Pose: x:{fused_orientation[0]} y:{fused_orientation[1]} z: {fused_orientation[2]}, w:{fused_orientation[3]}")
-        self.get_logger().info(f"Carto Pose: x: {rot[0]}, y:{rot[1]}z: {rot[2]}, w:{rot[3]}")
 
         # Publish fused pose
         self.robot_pose_pub.publish(self.robot_pose)
@@ -122,10 +118,6 @@ class PoseFusionNode(Node):
             self.publish_tf()
 
     def publish_tf(self):
-        if self.map_odom_tf is None:
-            self.get_logger().warn("map_odom_tf is None, cannot publish TFs")
-            return
-        
         self.get_logger().info("publish TFs")
         
         time = self.get_clock().now().to_msg()
