@@ -16,6 +16,27 @@ class Ella2TwistConverterNode(Node):
         self.get_logger().info('Ella2TwistConverterNode has been started')
 
     def twist_callback(self, twist_msg):
+        if 0.2 > twist_msg.linear.x >= 0.1:
+            if 0.0 < twist_msg.angular.z < 0.15:
+                twist_msg.angular.z = 0.15
+
+            if -0.15 < twist_msg.angular.z < 0.0:
+                twist_msg.angular.z = -0.15
+        
+        if 0.1 > twist_msg.linear.x >= 0.05:
+            if 0.0 < twist_msg.angular.z < 0.25:
+                twist_msg.angular.z = 0.25
+
+            if -0.25 < twist_msg.angular.z < 0.0:
+                twist_msg.angular.z = -0.25
+        
+        if 0.05 > twist_msg.linear.x >= 0.0:
+            if 0.0 < twist_msg.angular.z < 0.4:
+                twist_msg.angular.z = 0.4
+
+            if -0.4 < twist_msg.angular.z < 0.0:
+                twist_msg.angular.z = -0.4
+        
         twist_stamped_msg = TwistStamped()
         twist_stamped_msg.header = Header()
         twist_stamped_msg.header.stamp = self.get_clock().now().to_msg()
