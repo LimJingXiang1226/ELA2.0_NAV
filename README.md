@@ -176,6 +176,11 @@ System Tested on below version
 
    `ros2 launch ella2_slam carto.launch.xml simulation:=true use_sim_time:=true bringup:=true display:=true`
 
+3) Save Map
+
+   `export MAP_FILENAME=<filename>`
+   `./ELA2.0_NAV/other/save_map_pbstream.sh`
+
 ### Cartographer Localization
 
 1) Physical Robot
@@ -185,6 +190,11 @@ System Tested on below version
 2) Simulation
    
    `ros2 launch ella2_slam carto_localization.launch.xml map:=<map_file_name> use_sim_time:=true`
+
+3) Save Map
+
+   `export MAP_FILENAME=<filename>`
+   `./ELA2.0_NAV/other/save_map_pbstream.sh`
    
 ### ORB_SLAM3
 
