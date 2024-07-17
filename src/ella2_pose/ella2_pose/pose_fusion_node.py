@@ -125,7 +125,7 @@ class PoseFusionNode(Node):
         map_base = TransformStamped()
         map_base.header.stamp = time
         map_base.header.frame_id = "map"
-        map_base.child_frame_id = "base_footprint"
+        map_base.child_frame_id = "base__footprint"
         map_base.transform.translation.x = self.robot_pose.pose.position.x
         map_base.transform.translation.y = self.robot_pose.pose.position.y
         map_base.transform.translation.z = self.robot_pose.pose.position.z
