@@ -16,7 +16,7 @@ System Tested on below version
 ## Demonstration Video
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=-pLSMFoPnOc">
+  <a href="https://www.youtube.com/watch?v=-pLSMFoPnOc" target="_blank">
     <img src="https://img.youtube.com/vi/-pLSMFoPnOc/0.jpg" alt="Watch the video">
   </a>
 </div>
