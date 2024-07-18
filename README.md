@@ -13,6 +13,10 @@ System Tested on below version
 - YD LiDAR X2
 - Intel Realsense D435i 
 
+## Demonstration Video
+
+[![Watch the video](https://img.youtube.com/vi/-pLSMFoPnOc/0.jpg)](https://www.youtube.com/watch?v=-pLSMFoPnOc)
+
 ## Install dependencies
 
 ### Nav2 Stack Install
