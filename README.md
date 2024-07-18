@@ -15,7 +15,11 @@ System Tested on below version
 
 ## Demonstration Video
 
-[![Watch the video](https://img.youtube.com/vi/-pLSMFoPnOc/0.jpg)](https://www.youtube.com/watch?v=-pLSMFoPnOc)
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=-pLSMFoPnOc">
+    <img src="https://img.youtube.com/vi/-pLSMFoPnOc/0.jpg" alt="Watch the video">
+  </a>
+</div>
 
 ## Install dependencies
 
